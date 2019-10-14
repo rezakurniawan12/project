@@ -1,9 +1,14 @@
-<div>
+<ul>
     {{#each this.model as |mahasiswa|}}
+    <li>
         <p>Nama: {{mahasiswa.nama}}</p>
         <p>NIM: {{mahasiswa.nim}}</p>
         <p>Jurusan: {{mahasiswa.jurusan}}</p>
-        <br>
+    
+        <button type="button" onclick={{action "hapus" mahasiswa}}>
+            Delete
+        </button>
+    </li>
     {{/each}}
-</div>
+</ul>
 {{outlet}}
