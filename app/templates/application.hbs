@@ -1,5 +1,9 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
+<div>
+    {{#each this.model as |mahasiswa|}}
+        <p>Nama: {{mahasiswa.nama}}</p>
+        <p>NIM: {{mahasiswa.nim}}</p>
+        <p>Jurusan: {{mahasiswa.jurusan}}</p>
+        <br>
+    {{/each}}
+</div>
 {{outlet}}
